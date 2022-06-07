@@ -79,6 +79,7 @@ namespace test_DB
             this.textBox_Login.Name = "textBox_Login";
             this.textBox_Login.Size = new System.Drawing.Size(100, 33);
             this.textBox_Login.TabIndex = 3;
+            this.textBox_Login.WordWrap = false;
             // 
             // textBox_Password
             // 
@@ -89,6 +90,7 @@ namespace test_DB
             this.textBox_Password.Name = "textBox_Password";
             this.textBox_Password.Size = new System.Drawing.Size(100, 30);
             this.textBox_Password.TabIndex = 4;
+            this.textBox_Password.WordWrap = false;
             // 
             // button1
             // 
@@ -147,8 +149,11 @@ namespace test_DB
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Name = "Login";
-            this.Text = "Login";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Меню входа";
             this.Load += new System.EventHandler(this.Login_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();

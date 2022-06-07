@@ -38,11 +38,44 @@ namespace test_DB
 
             if (table.Rows.Count == 1)
             {
+
                 MessageBox.Show("Вы успешно вошли!");
-                Begun frm1 = new Begun();
-                this.Hide();
-                frm1.ShowDialog();
-                this.Show();
+                database.openConnection();
+                string QS = $"select ID_Role from Beguns where Login_User = '{loginUser}'";
+                SqlCommand com = new SqlCommand(QS, database.getSqlConnection());
+                int Role = ((int)com.ExecuteScalar());
+                switch (Role)
+                {
+                    case 2:
+                        LoginUser.Log_Us = textBox_Login.Text;
+                        Begun frm_Begun = new Begun();
+                        this.Hide();
+                        frm_Begun.ShowDialog();
+                        this.Show();
+                        break;
+                    case 1:
+                        LoginUser.Log_Us = textBox_Login.Text;
+                        Director frm_director = new Director();
+                        this.Hide();
+                        frm_director.ShowDialog();
+                        this.Show();
+                        break;
+                    case 3:
+                        LoginUser.Log_Us = textBox_Login.Text;
+                        Manager frm_manager = new Manager();
+                        this.Hide();
+                        frm_manager.ShowDialog();
+                        this.Show();
+                        break;
+                    case 4:
+                        LoginUser.Log_Us = textBox_Login.Text;
+                        Klad frm_klad = new Klad();
+                        this.Hide();
+                        frm_klad.ShowDialog();
+                        this.Show();
+                        break;
+                    default: break;
+                }
             }
             else
                 MessageBox.Show("Введен неверный логин или пароль!");

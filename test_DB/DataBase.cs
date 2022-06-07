@@ -9,7 +9,7 @@ namespace test_DB
 {
     class DataBase
     {
-        SqlConnection SqlConnection = new SqlConnection(@"Data Source = Get\SQLEXPRESS; Initial Catalog = WSS; Integrated Security = True");
+        SqlConnection SqlConnection = new SqlConnection(@"Data Source = localhost\SQLEXPRESS; Initial Catalog = WSS; Integrated Security = True");
 
         public void openConnection()
         {

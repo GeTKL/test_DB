@@ -57,7 +57,7 @@ namespace test_DB
             this.Visible.TabIndex = 1;
             this.Visible.Text = "V";
             this.Visible.UseVisualStyleBackColor = true;
-            this.Visible.Click += new System.EventHandler(this.Visible_Click);
+           
             // 
             // Hide
             // 
@@ -67,7 +67,7 @@ namespace test_DB
             this.Hide.TabIndex = 2;
             this.Hide.Text = "H";
             this.Hide.UseVisualStyleBackColor = true;
-            this.Hide.Click += new System.EventHandler(this.Hide_Click);
+     
             // 
             // label1
             // 
@@ -106,6 +106,7 @@ namespace test_DB
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 6;
+            this.textBox1.WordWrap = false;
             // 
             // textBox2_password
             // 
@@ -115,6 +116,7 @@ namespace test_DB
             this.textBox2_password.Size = new System.Drawing.Size(100, 20);
             this.textBox2_password.TabIndex = 7;
             this.textBox2_password.UseSystemPasswordChar = true;
+            this.textBox2_password.WordWrap = false;
             // 
             // Register
             // 
